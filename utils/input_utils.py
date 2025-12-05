@@ -1,3 +1,4 @@
+import json
 def demander_texte(message):
     if len(message) > 0:
         print(message,":",end=" ")
@@ -37,6 +38,7 @@ demander_choix("Voulez-vous continuer ?", ["Oui", "Non"])
 
 def load_fichier(chemin_fichier):
     with open(chemin_fichier, "r",encoding="utf-8") as fichier:
+        return json.load(fichier)
 
 
 
