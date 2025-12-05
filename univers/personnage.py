@@ -39,3 +39,4 @@ ajouter_objet(moi, "Sortilège", "LESORT")
 
 afficher_personnage(moi)
 
+print("test")
