@@ -23,9 +23,8 @@ def modifier_argent(joueur,montant):
 
 def ajouter_objet(joueur,cle,objet):
     if cle == "Inventaire":
-        joueur["Inventaire"] += objet
+        joueur["Inventaire"] = objet
     else:
-        joueur["Sortilège"] += objet
-
+        joueur["Sortilège"] = objet
 
 
