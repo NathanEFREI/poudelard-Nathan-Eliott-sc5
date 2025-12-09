@@ -29,14 +29,3 @@ def ajouter_objet(joueur,cle,objet):
 
 
 
-moi = initialiser_personnage("Buisson","Eliott",
-                       {"courage":8,"intelligence":8,"loyauté":8,"ambition":8})
-afficher_personnage(moi)
-
-modifier_argent(moi,100000)
-ajouter_objet(moi,"Inventaire","LEOBJET")
-ajouter_objet(moi, "Sortilège", "LESORT")
-
-afficher_personnage(moi)
-
-print("test")
