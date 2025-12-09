@@ -8,6 +8,7 @@ def demander_texte(message):
                 message_user = input().strip()
         else:
             print(message_user)
+            return(message_user)
 
 def demander_nombre(message,min_val=None,max_val=None):
     print(message,":",end=" ")
@@ -19,8 +20,10 @@ def demander_nombre(message,min_val=None,max_val=None):
                 nbr = int(input())
         else:
             print(nbr)
+            return(nbr)
     else:
         print(nbr)
+        return(nbr)
 
 def demander_choix(message,options):
     print(message,":")
@@ -33,7 +36,8 @@ def demander_choix(message,options):
             print("Votre choix :",end=" ")
             nbr = int(input())
     print(options[nbr-1])
-demander_choix("Voulez-vous continuer ?", ["Oui", "Non"])
+    return(nbr)
+
 
 
 def load_fichier(chemin_fichier):
