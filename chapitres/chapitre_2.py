@@ -1,3 +1,5 @@
+from univers import personnage
+from univers.personnage import afficher_personnage
 from utils.input_utils import *
 from chapitre_1 import lancer_chapitre_1
 from univers.maison import repartition_maison
@@ -48,6 +50,34 @@ def ceremonie_repartition(joueur):
                   ["Fonces sans hésiter", "Cherches la meilleure stratégie","Comptes sur tes amis", "Analyses le problème"],
                   ["Gryffondor", "Serpentard", "Poufsouffle", "Serdaigle"])]
     maison = repartition_maison(joueur,questions)
+    joueur["Maison"] = maison
+    return joueur
 
-ceremonie_repartition(rencontrer_amis(lancer_chapitre_1()))
+#ceremonie_repartition(rencontrer_amis(lancer_chapitre_1()))
 
+def installation_salle_commune(joueur):
+    dico = load_fichier("../data/maisons.json")
+    print("Vous suivez les préfets à travers les couloirs du château...")
+    input()
+
+    maison = joueur["Maison"]
+
+    if maison in dico:
+        print(dico[maison]["emoji"], end=" ")
+        print(dico[maison]["description"])
+        input()
+        print(dico[maison]["message_installation"])
+        input()
+        print(f"Les couleurs de votre maison:{",".join(dico[maison]["couleurs"])}")
+#installation_salle_commune(ceremonie_repartition(rencontrer_amis(lancer_chapitre_1())))
+
+def lancer_chapitre_2(personnage):
+    rencontrer_amis(personnage)
+    mot_de_bienvenue()
+    ceremonie_repartition(personnage)
+    installation_salle_commune(personnage)
+    input()
+    afficher_personnage(personnage)
+    print("Vous êtes arrivez à la fin du Chapitre 2. Vous allez maintenant pouvoir débuter vos cours à Poudelard !")
+
+lancer_chapitre_2(lancer_chapitre_1())
