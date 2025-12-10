@@ -9,14 +9,25 @@ def initialiser_personnage(nom, prenom, attributs):
     return fiche_perso
 
 def afficher_personnage(personnage):
-    print("Profil du personnage :","\n")
-    for (clé,valeur) in personnage.items():
-        if isinstance(clé,dict):
-            print(clé)
-            for (clé,valeur) in clé.items():
-                print(clé.values())
+    print("Profil du personnage :\n")
+    for cle, valeur in personnage.items():
+
+        if type(valeur) == dict:
+            print(f"{cle} :")
+            for k, v in valeur.items():
+                print(f"   - {k} : {v}")
+
+        elif type(valeur) == list:
+            if cle == "Inventaire" or cle == "Sortilège":
+                print(f"{cle} : {', '.join(str(item) for item in valeur)}")
+            else:
+                print(f"{cle} :")
+                for item in valeur:
+                    print(f"   - {item}")
+
         else:
-            print(clé, "=", valeur)
+            print(f"{cle} = {valeur}")
+
 
 def modifier_argent(joueur,montant):
     joueur["Galions"] = montant

@@ -1,4 +1,4 @@
-from personnage import*
+
 
 maisons = {
 "Gryffondor": 0,
@@ -65,10 +65,10 @@ def repartition_maison(joueur, questions):
         "Serdaigle": 0
     }
 
-    maisons["Gryffondor"] += joueur["Attributs"]["courage"] * 2
+    maisons["Gryffondor"] += joueur["Attributs"]["Courage"] * 2
     maisons["Serpentard"] += joueur["Attributs"]["ambition"] * 2
-    maisons["Poufsouffle"] += joueur["Attributs"]["loyauté"] * 2
-    maisons["Serdaigle"] += joueur["Attributs"]["intelligence"] * 2
+    maisons["Poufsouffle"] += joueur["Attributs"]["Loyauté"] * 2
+    maisons["Serdaigle"] += joueur["Attributs"]["Intelligence"] * 2
 
     for question, choix, maison_options in questions:
         print(f"\n{question}")
@@ -97,8 +97,8 @@ def repartition_maison(joueur, questions):
             score_max = score
             maison_finale = maison_nom
 
-    print(f"Votre maison est", maison_finale, "!")
-
+    print(f"Le Choixpeau s'exclame :", maison_finale, "!!!")
+    return maison_finale
 
 
 

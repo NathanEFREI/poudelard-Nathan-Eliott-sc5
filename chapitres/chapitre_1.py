@@ -96,7 +96,7 @@ def lancer_chapitre_1():
     rencontrer_hagrid()
     acheter_fournitures(p)
     print("Le chapitre 1 est terminé, vous êtes maintenant fin prêt à rejoindre Poudelard, l'académie de sorcier !")
-
-lancer_chapitre_1()
+    return p
+#lancer_chapitre_1()
 
 
