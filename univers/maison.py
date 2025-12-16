@@ -20,7 +20,6 @@ def actualiser_points_maison(maisons,nom_maison,points):
             print(f"Le score de", nom_maison, "à diminué de", points,
                   "points. Elle a maintenant", maisons[nom_maison], "points.")
 
-print(actualiser_points_maison(maisons,"Gryffondor",-30))
 
 def afficher_maison_gagnante(maisons):
     if not maisons:
@@ -33,13 +32,13 @@ def afficher_maison_gagnante(maisons):
             maisons_gagnantes.append(nom_maison)
     if len(maisons_gagnantes) == 1:
         gagnante = maisons_gagnantes[0]
-        print(f"La maison gagnante est gagnante avec score_maximal points.")
+        print(f"La maison gagnante est gagnante avec {score_maximal} points.")
     else:
         liste_noms = ", ".join(maisons_gagnantes[:-1])
         if liste_noms:
             liste_noms += " et "
         liste_noms += maisons_gagnantes[-1]
-        print(f"Égalité ! Les maisons ont :", score_maximal, "points chacune.")
+        print(f"Égalité ! Les maisons ont : {score_maximal} points chacune.")
 
 
 def repartition_maison(joueur, questions):

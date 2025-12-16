@@ -1,10 +1,11 @@
-from univers import personnage
 from univers.personnage import afficher_personnage
 from utils.input_utils import *
 from chapitre_1 import lancer_chapitre_1
 from univers.maison import repartition_maison
 
 def rencontrer_amis(joueur):
+    print("Début du chapitre 2 !",end="")
+    input()
     print("Vous montez à bord du Poudlard Express. Le train démarre lentement en direction du Nord...",end="")
     input()
     print("— Salut ! Moi c’est Ron Weasley. Tu veux bien qu’on s’assoie ensemble ?")
@@ -32,7 +33,7 @@ def rencontrer_amis(joueur):
 #rencontrer_amis(lancer_chapitre_1())
 
 def mot_de_bienvenue():
-    print("Bienvenue monsieur Dumbledore",end="")
+    print("Bienvenue Monsieur Dumbledore",end="")
     input()
 
 def ceremonie_repartition(joueur):
@@ -79,5 +80,5 @@ def lancer_chapitre_2(personnage):
     input()
     afficher_personnage(personnage)
     print("Vous êtes arrivez à la fin du Chapitre 2. Vous allez maintenant pouvoir débuter vos cours à Poudelard !")
-
-lancer_chapitre_2(lancer_chapitre_1())
+    return personnage
+#lancer_chapitre_2(lancer_chapitre_1())
