@@ -66,6 +66,7 @@ def acheter_fournitures(perso):
     if len(objet) > 0:
         print("Vous n'avez pas acheté tous les objets obligatoires ")
         print("Partie perdu !")
+        exit()
     else:
         print("Tous les objets obligatoires ont été achetés !")
         print(f"Vous avez {perso["Galions"]} galions")
@@ -82,6 +83,7 @@ def acheter_fournitures(perso):
             if perso["Galions"] >= animaux[str(choixA)][1]:
                 verif = True
                 ajouter_objet(perso,"Inventaire",animaux[str(choixA)][0])
+                perso["Galions"] -= animaux[str(choixA)][1]
         print(f"Vous avez choisi: {animaux[str(choixA)][0]} (-{animaux[str(choixA)][1]} galions).")
         print("Tous les objets obligatoires ont été achetés avec succès !")
         print("Voici votre inventaire final:")
@@ -96,7 +98,7 @@ def lancer_chapitre_1():
     rencontrer_hagrid()
     acheter_fournitures(p)
     print("Le chapitre 1 est terminé, vous êtes maintenant fin prêt à rejoindre Poudelard, l'académie de sorcier !")
-
-lancer_chapitre_1()
+    return p
+#lancer_chapitre_1()
 
 

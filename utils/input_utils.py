@@ -18,6 +18,7 @@ def demander_nombre(message,min_val=None,max_val=None):
             while nbr < min_val or nbr > max_val:
                 print(message, ":", end=" ")
                 nbr = int(input())
+            return(nbr)
         else:
             print(nbr)
             return(nbr)
