@@ -44,7 +44,7 @@ def rencontrer_hagrid():
 
 
 def acheter_fournitures(perso):
-    dico = load_fichier("../data/inventaire.json")
+    dico = load_fichier("data/inventaire.json")
     print("Bienvenue sur le Chemin de Traverse !")
     input()
     print("Catalogue des objets disponibles :","\n")
@@ -99,6 +99,6 @@ def lancer_chapitre_1():
     acheter_fournitures(p)
     print("Le chapitre 1 est terminé, vous êtes maintenant fin prêt à rejoindre Poudelard, l'académie de sorcier !")
     return p
-#lancer_chapitre_1()
+
 
 

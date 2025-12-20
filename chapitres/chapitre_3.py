@@ -4,13 +4,13 @@ from univers.personnage import ajouter_objet, afficher_personnage
 from utils.input_utils import load_fichier,demander_texte
 from univers.maison import actualiser_points_maison,afficher_maison_gagnante,maisons
 import random
-from chapitre_2 import lancer_chapitre_2
-from chapitre_1 import lancer_chapitre_1
+from chapitres.chapitre_2 import lancer_chapitre_2
+from chapitres.chapitre_1 import lancer_chapitre_1
 
-def apprendre_sorts(joueurs,chemin_fichier="../data/sorts.json"):
+def apprendre_sorts(joueurs,chemin_fichier="data/sorts.json"):
     print("tu commences tes cours de magie à Poudelard...")
     input()
-    dico = load_fichier("../data/sorts.json")
+    dico = load_fichier("data/sorts.json")
     sorts_obligatoires=["Offensif","Défensif","Utilitaire","Utilitaire","Utilitaire"]
     types = ["Offensif","Défensif","Utilitaire"]
     offensif = []
@@ -61,11 +61,11 @@ def apprendre_sorts(joueurs,chemin_fichier="../data/sorts.json"):
             if sort["nom"] == nom_sort:
                 desc = sort["description"]
                 print(f"-{nom_sort} ({sort['type']}) : {desc}")
-#apprendre_sorts(lancer_chapitre_2(lancer_chapitre_1()))
+
 
 import random
 
-def quiz_magie(joueur, chemin_fichier="../data/quiz_magie.json"):
+def quiz_magie(joueur, chemin_fichier="data/quiz_magie.json"):
     questions = load_fichier(chemin_fichier)
 
     print("Bienvenue au quiz de magie de Poudlard !")
@@ -96,16 +96,19 @@ def quiz_magie(joueur, chemin_fichier="../data/quiz_magie.json"):
 
     return score
 
-#quiz_magie(lancer_chapitre_2(lancer_chapitre_1()))
+
 
 def lancer_chapitre_3(personnage,maisons):
     apprendre_sorts(personnage)
     p = quiz_magie(personnage)
     actualiser_points_maison(maisons,personnage["Maison"],p)
+    input()
     afficher_maison_gagnante(maisons)
+    input()
     afficher_personnage(personnage)
+    
 
-lancer_chapitre_3(lancer_chapitre_2(lancer_chapitre_1()),maisons)
+
 
 
 
