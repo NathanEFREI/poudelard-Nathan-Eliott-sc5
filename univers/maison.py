@@ -32,7 +32,7 @@ def afficher_maison_gagnante(maisons):
             maisons_gagnantes.append(nom_maison)
     if len(maisons_gagnantes) == 1:
         gagnante = maisons_gagnantes[0]
-        print(f"La maison gagnante est gagnante avec {score_maximal} points.")
+        print(f"La maison gagnante est {gagnante} avec {score_maximal} points.")
     else:
         liste_noms = ", ".join(maisons_gagnantes[:-1])
         if liste_noms:
