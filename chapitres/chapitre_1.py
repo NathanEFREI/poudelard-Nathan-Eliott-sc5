@@ -4,7 +4,7 @@ from utils.input_utils import *
 
 
 def introduction():
-    print("Bienvenue dans le Chapitre 1 ! préparez-vous bien pour l'histoire palpitante que vous êtes sur le point de vivre !")
+    print("Bienvenue dans le Chapitre 1 ! Préparez-vous bien pour l'histoire palpitante que vous êtes sur le point de vivre !")
 
 def creer_personnage():
     nom = demander_texte("Quelle est votre nom")
