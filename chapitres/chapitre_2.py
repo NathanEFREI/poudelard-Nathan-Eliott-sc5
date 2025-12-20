@@ -33,7 +33,7 @@ def rencontrer_amis(joueur):
 
 
 def mot_de_bienvenue():
-    print("Bienvenue Monsieur Dumbledore",end="")
+    print("Bienvenue Monsieur Dumbledore !",end="")
     input()
 
 def ceremonie_repartition(joueur):
