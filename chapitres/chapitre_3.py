@@ -106,7 +106,7 @@ def lancer_chapitre_3(personnage,maisons):
     afficher_maison_gagnante(maisons)
     input()
     afficher_personnage(personnage)
-    
+    return personnage
 
 
 
