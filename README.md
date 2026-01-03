@@ -297,7 +297,7 @@ Niveau de courage (1-10) : 8
 
 ## 📄 Licence
 
-Projet réalisé dans le cadre du cours de Programmation.
+Projet réalisé dans le cadre du cours de Programmation en Python.
 
 ---
 
