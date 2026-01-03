@@ -127,6 +127,7 @@ def match_quidditch(joueur, maisons):
         print(f"+500 points pour {maison_joueur} !")
         actualiser_points_maison(maisons, maison_joueur, 500)
         afficher_maison_gagnante(maisons)
+
     elif equipe_adverse['attrape_vifdor']:
         print(f"Le Vif d'Or a été attrapé par {maison_adverse} !")
         print(f"+150 points pour {maison_adverse} ! Total : {equipe_adverse['score']} points.")
@@ -136,6 +137,7 @@ def match_quidditch(joueur, maisons):
         print(f"+500 points pour {maison_adverse} !")
         actualiser_points_maison(maisons, maison_adverse, 500)
         afficher_maison_gagnante(maisons)
+
     elif equipe_joueur['score'] > equipe_adverse['score']:
         print(f"La maison gagnante est {maison_joueur} avec {equipe_joueur['score']} points !")
         print(f"{maison_joueur} remporte le match !")
@@ -143,6 +145,7 @@ def match_quidditch(joueur, maisons):
         print(f"+500 points pour {maison_joueur} !")
         actualiser_points_maison(maisons, maison_joueur, 500)
         afficher_maison_gagnante(maisons)
+
     elif equipe_adverse['score'] > equipe_joueur['score']:
         print(f"La maison gagnante est {maison_adverse} avec {equipe_adverse['score']} points !")
         print(f"{maison_adverse} remporte le match...")
@@ -150,6 +153,7 @@ def match_quidditch(joueur, maisons):
         print(f"+500 points pour {maison_adverse} !")
         actualiser_points_maison(maisons, maison_adverse, 500)
         afficher_maison_gagnante(maisons)
+
     else:
         print(f"Match nul ! {equipe_joueur['score']} points partout.")
         actualiser_points_maison(maisons, maison_joueur, equipe_joueur['score'])
@@ -168,7 +172,7 @@ def lancer_chapitre4_quidditch(joueur, maisons):
     input("Appuyez sur Entrée pour continuer...")
 
     print()
-    print("- COUPE DES QUATRE MAISONS -")
+    print("-- COUPE DES QUATRE MAISONS  --")
     afficher_maison_gagnante(maisons)
     input("Appuyez sur Entrée pour continuer...")
 
